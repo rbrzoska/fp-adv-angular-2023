@@ -6,4 +6,8 @@
   <button (click)="changeLanguage('en')" [ngClass]="{active : (selectedLanguage$ | async) === 'en'}">EN</button>
   <button (click)="changeLanguage('pl')" [ngClass]="{active : (selectedLanguage$ | async) === 'pl'}">PL</button>
 </div>
+<div>
+  <button (click)="login()" *ngIf="!(isLoggedIn$ | async)">Login</button>
+  <button (click)="logout()" *ngIf="isLoggedIn$ | async">Logout</button>
+</div>
 
