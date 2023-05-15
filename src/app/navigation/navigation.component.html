@@ -2,3 +2,9 @@
   <a routerLink="/">Home</a>
   <a routerLink="/test">Test</a>
 </nav>
+<div>
+  {{selectedLang}}
+  <button (click)="changeLanguage('en')">EN</button>
+  <button (click)="changeLanguage('pl')">PL</button>
+</div>
+
