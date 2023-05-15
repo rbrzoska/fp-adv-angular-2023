@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TranslationService } from '../shared/translation.service';
 import { TestComponent } from './test.component';
 
 const routes: Routes = [

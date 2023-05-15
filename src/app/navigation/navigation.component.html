@@ -3,6 +3,9 @@
   <a routerLink="/test">Test</a>
 </nav>
 <div>
+  <button (click)="pushMessage()">Push message</button>
+</div>
+<div>
   <button (click)="changeLanguage('en')" [ngClass]="{active : (selectedLanguage$ | async) === 'en'}">EN</button>
   <button (click)="changeLanguage('pl')" [ngClass]="{active : (selectedLanguage$ | async) === 'pl'}">PL</button>
 </div>
