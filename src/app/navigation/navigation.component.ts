@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../shared/translation.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
@@ -9,14 +10,13 @@ import { TranslationService } from '../shared/translation.service';
 export class NavigationComponent {
 
 
-  selectedLang: string;
+  selectedLanguage$: Observable<string>;
   constructor(private _translationService: TranslationService) {
-    this.selectedLang = this._translationService.selectedLanguage;
+    this.selectedLanguage$ = this._translationService.selectedLanguage$;
 
   }
 
   changeLanguage(lang: string) {
     this._translationService.changeLanguage(lang);
-    this.selectedLang = this._translationService.selectedLanguage;
   }
 }
