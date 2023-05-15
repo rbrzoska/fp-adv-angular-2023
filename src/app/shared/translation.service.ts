@@ -15,5 +15,10 @@ export class TranslationService {
 
   constructor() { }
 
+  translate(key: string, lang: string) {
+    const translations = this.translations[lang] || this.translations['en'];
+
+    return translations[key] ?? key;
+  }
 
 }
