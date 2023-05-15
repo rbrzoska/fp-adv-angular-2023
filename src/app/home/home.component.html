@@ -1,3 +1,3 @@
 <h1>{{ 'home.title' | translate }}</h1>
-<div>Content for non-logged-in users</div>
-<div>Restricted content for logged-in users</div>
+<div *appForLoggedInUsers="false">Content for non-logged-in users</div>
+<div *appForLoggedInUsers="true">Restricted content for logged-in users</div>
